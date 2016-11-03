@@ -15,8 +15,7 @@ var http = require('http'),
 var app = http.createServer(function(req, resp){
 	var filename = path.join(__dirname, "static", url.parse(req.url).pathname);
 	(fs.exists || path.exists)(filename, function(exists){
-		if (exists) {
-			console.log(filename);
+		if (exists && url.parse(req.url).pathname == "my_script.js") {
 			fs.readFile(filename, function(err, data){
 				if (err) {
 					// File exists but is not readable (permissions issue?)

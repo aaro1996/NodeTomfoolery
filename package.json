@@ -1,16 +1,16 @@
 {
-  "name": "fall2016-module6-aaron-handleman-444509-peter-olson-441666",
+  "name": "fall2016-module6-aaron-handleman-444509",
   "version": "1.0.0",
-  "description": "The package.json for Aaron and Peter's Node.JS",
+  "description": "The package.json for Aaron's Node.JS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ahandleman@bitbucket.org/ahandleman/fall2016-module6-aaron-handleman-444509-peter-olson-441666.git"
+    "url": "git+https://ahandleman@bitbucket.org/ahandleman/fall2016-module6-aaron-handleman-444509.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ahandleman/fall2016-module6-aaron-handleman-444509-peter-olson-441666#readme"
+  "homepage": "https://bitbucket.org/ahandleman/fall2016-module6-aaron-handleman-444509#readme"
 }

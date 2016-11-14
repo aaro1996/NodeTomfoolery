@@ -6,11 +6,21 @@
    </head>
    <body>
    	<table>
-
-
+   		<tr> 
+   			<th> Chat </th> 
+   			<th> Users </th> 
+   			<th> Rooms </th>
+   		</tr>
+   		<tr> 
+   			<td> <div id="div_chatlog"></div> </td>
+   			<td> <ul id="user_list"></ul> </td> 
+   			<td> <ul id="room_list"></ul> </td>
+   		</tr>
+   		<tr> 
+   			<td> <input type="text" id="input_text_message"/> </td>
+   			<td> <button id="button_send_message"> Send </button> </td> 
+   			<td> <button id="button_new_chatroom"> New Chatroom </button> </td>
+   		</tr>
    	</table>
-      <input type="text" id="input_text_message"/>
-      <button id="button_send_message">send</button>
-      <div id="div_chatlog"></div>
    </body>
 </html>

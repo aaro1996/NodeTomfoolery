@@ -50,14 +50,19 @@ var app = http.createServer(function(req, resp){
 app.listen(3456); 
 // Do the Socket.IO magic:
 var io = socketio.listen(app);
+var cur_date = new Date();
 io.sockets.on("connection", function(socket){
 	// This callback runs when a new Socket.IO connection is established.
  
 	socket.on('send_message', function(data) {
 		// This callback runs when the server receives a new message from the client.
- 
-		console.log("message: "+data["message"]); // log it to the Node.JS output
-		io.sockets.emit("message_to_client",{message:data["message"] }) // broadcast the message to other users
+ 		console.log("message in " + data['room'] + " by " + data['username'] + " at " + data['time'] + ": "+data['message']); // log it to the Node.JS output
+ 		var send_object = {};
+ 		send_object['time'] = data['time'];
+ 		send_object['room'] = data['room'];
+ 		send_object['username'] = data['username'];
+ 		send_object['message'] = data['message'];
+ 		io.sockets.emit("message_to_client", send_object) // broadcast the message to other users
 	});
 });
 

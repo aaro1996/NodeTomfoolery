@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
    <head>
-
+      <title> Talk to Strangers on the Internet! </title>
       <script src="/socket.io/socket.io.js"></script>
       <script src="my_script.js" defer="defer"></script>
       <link rel="stylesheet" type="text/css" href="style.css"/>
    </head>
    <body>
-      <div id="username_div">
-         <p id="username_head_p"> Currently logged in as <span id="Username"> </span> </p>
-         <button id="change_username_button"> New Username </button>
-      </div>
+      <h1> Welcome to Aaron's Chatroom! </h1>
       <div id="chat_table_div">
+         <p id="username_head_p"> Currently logged in as <span id="username_span"> </span> <button id="button_change_username"> New Username </button></p>
          <table>
             <tr> 
-               <th> Chat </th> 
+               <th> Room: <span id="chatroom_span"> </span> </th> 
    			   <th> Users </th> 
    			   <th> Rooms </th>
                </tr>
-            <tr> 
-               <td> <div id="div_chatlog"></div> </td>
-               <td> <ul id="user_list"></ul> </td> 
-               <td> <ul id="room_list"></ul> </td>
+            <tr id="chat_row"> 
+               <td id="chat_td"> <div id="div_chatlog"></div> </td>
+               <td> <div id="user_list"></div> </td> 
+               <td> <div id="room_list"></div> </td>
             </tr>
             <tr> 
-               <td> <input type="text" id="input_text_message"/> </td>
+               <td> <input type="text" id="input_text_message" placeholder="Chat Here"/> </td>
                <td> <button id="button_send_message"> Send </button> </td> 
                <td> <button id="button_new_chatroom"> New Chatroom </button> </td>
             </tr>
          </table>
+         <div id="admin_tools" hidden="hidden"> 
+            <button id="button_new_admin"> Promote New Admin </button> 
+            <button id="button_kick_user"> Kick User </button> 
+            <button id="button_ban_user"> Ban User </button>
+         </div>
       </div>
    </body>
 </html>

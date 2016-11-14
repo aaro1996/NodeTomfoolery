@@ -1,3 +1,67 @@
 * {
 	align: center;
 }
+
+body { /*skeleton from wiki */
+    width: 760px; /* how wide to make your web page */
+    background-color: skyblue; /* what color to make the background */
+    margin: 0 auto;
+    padding: 0;
+    font:12px/16px Verdana, sans-serif; /* default font */
+}
+
+.private_message {
+	font-style: italic;
+}
+
+table {
+	border-collapse: collapse;
+	height: 80%;
+}
+
+th, td {
+	border: solid 1px black;
+	position: static;
+	vertical-align: top;
+}
+#admin_tools {
+	background-color: white;
+}
+td * {
+	position: static;
+	vertical-align: top;
+}
+
+p {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#chat_row {
+	height: 600px;
+}
+
+#chat_table_div {
+	background-color: white;
+	border: solid 3px black;
+	border-radius: 8px;
+	text-align: left;
+}
+
+#chat_td {
+	width: 800px;
+}
+
+#input_text_message {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+button {
+	border-radius: 5px;
+	background-color: #CCFFCC;
+}

@@ -5,7 +5,7 @@ var my_script = {
    element_button_send_message: document.getElementById("button_send_message"),
    element_input_text_message: document.getElementById("input_text_message"),
    current_chatroom: "default",
-   username: null
+   username: "danny"
 };
 
 

@@ -253,7 +253,7 @@ io.sockets.on("connection", function(socket){
 		}
 		var send_object = {};
 		send_object['operation'] = data['operation'];
-		if (verify_username_socket_room_link(data['target'], username_info_object[data['target']]['s_id'], data['room'])) {
+		if (username_info_object[data['target']] && verify_username_socket_room_link(data['target'], username_info_object[data['target']]['s_id'], data['room'])) {
 			send_object['success'] = true;
 			switch(data['operation']) {
 				case 0:

@@ -15,7 +15,8 @@ var http = require('http'),
 var app = http.createServer(function(req, resp){
 	var filename = path.join(__dirname, "static", url.parse(req.url).pathname);
 	(fs.exists || path.exists)(filename, function(exists){
-		if (exists && url.parse(req.url).pathname == "/my_script.js") {
+		console.log(url.parse(req.url).pathname);
+		if (exists && url.parse(req.url).pathname == "/my_script.js" || url.parse(req.url).pathname == "/style.css") {
 			fs.readFile(filename, function(err, data){
 				if (err) {
 					// File exists but is not readable (permissions issue?)
@@ -36,7 +37,7 @@ var app = http.createServer(function(req, resp){
 				resp.end();
 				return;
 			});
-		}else{
+		} else {
 			// File does not exist
 			fs.readFile("client.html", function(err, data){
 				// This callback runs when the client.html file has been read from the filesystem.
